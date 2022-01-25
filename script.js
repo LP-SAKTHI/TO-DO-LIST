@@ -4,11 +4,9 @@ const clearBtn = document.querySelector(".footer button")
 const todoList = document.querySelector(".todolist");
 const pendingTask = document.querySelector(".footer .pendingtasks")
 
-console.log(inputField)
-console.log(addBtn)
-console.log(clearBtn)
-console.log(todoList)
-
+const nowDate = new Date();
+const ans = nowDate.getFullYear()
+console.log(nowDate)
 
 inputField.onkeyup = () => {
 
@@ -64,7 +62,9 @@ function showTasks()
 
     let newLi = "";
     
+    
     listArray.forEach((element,index) => {
+        
         newLi += `<li>${element}<span class = "icon" onclick = "deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
         
     });
